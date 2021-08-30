@@ -12,18 +12,44 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <!-- Name -->
+            <!-- username -->
             <div>
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="username" :value="__('username')" />
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
             </div>
+            <!-- first_Name -->
+            <div>
+                <x-label for="first_name" :value="__('first_name')" />
 
+                <x-input id="name" class="block mt-1 w-full" type="text" name="first_name" :value="old('first_name')" required autofocus />
+            </div>
+            <!-- Last_Name -->
+            <div>
+                <x-label for="last_name" :value="__('last_name')" />
+
+                <x-input id="name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autofocus />
+            </div>
+            
             <!-- Email Address -->
             <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
+                <x-label for="email" :value="__('email')" />
+                
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+            </div>
+            
+            <!-- City -->
+            <div>
+                <x-label for="city" :value="__('city')" />
+
+                <x-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required autofocus />
+            </div>
+
+            <!-- Phone -->
+            <div>
+                <x-label for="phone" :value="__('phone')" />
+
+                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus />
             </div>
 
             <!-- Password -->
