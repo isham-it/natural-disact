@@ -18,7 +18,7 @@ class CreateEventTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('poster');
-            $table->date('date')->format('dd/mm/YYYY');
+            $table->string('date');
 
 
         });

@@ -6,7 +6,7 @@
 
 @section('content')
 
-   <h1>HOMEEPAGE</h1>
+   <h1>HOME PAGE</h1>
 
 <nav>
     <ul>

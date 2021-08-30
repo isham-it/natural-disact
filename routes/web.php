@@ -66,7 +66,6 @@ Route::get('/delete/offer/{id}', [OfferController::class, 'destroy'])->name('del
 // Show the form to create an offer
 Route::get('/new-offer', [OfferController::class, 'create']);
 Route::post('/new-offer', [OfferController::class, 'store']);
-
 // Show the form to create an ask
 Route::get('/new-ask', [AskController::class, 'create']);
 Route::post('/new-ask', [AskController::class, 'store']);
@@ -78,5 +77,3 @@ Route::post('/update/ask/{id}', [AskController::class, 'update']);
 // Show the form to update a offer
 Route::get('/update/offer/{id}', [OfferController::class, 'edit'])->name('update.offer');
 Route::post('/update/offer/{id}', [OfferController::class, 'update']);
-
-
