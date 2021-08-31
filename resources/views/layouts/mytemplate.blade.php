@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>@yield('title')</title>
 </head>
+@include('layouts.nav')
 
 <body>
-    @include('layouts.nav')
 
     <div class="content">
         @yield('content')
@@ -18,9 +18,13 @@
 
     
     @yield('scripts')
+
     <footer>
-        <p>This is my SPECIAL footer</p>
+            <p>This is my SPECIAL footer</p>
     </footer>
 </body>
+@include('auth.register')
+
+
 
 </html>

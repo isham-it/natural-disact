@@ -213,6 +213,10 @@
                 font-family: 'Kaisei Decol', serif;
             }
         }
+        
+        footer {
+            bottom: 0;
+        }
         /*BONUS*/
         
         @media screen and (min-width: 1080px) {}

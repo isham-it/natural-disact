@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-
+@include('layouts.nav')
 @include('layouts.mytemplate')
 
 
