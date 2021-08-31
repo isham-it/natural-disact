@@ -13,12 +13,12 @@ class CreateEventTable extends Migration
      */
     public function up()
     {
-        Schema::create('event', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('description');
             $table->string('poster');
-            $table->date('date')->format('dd/mm/YYYY');
+            $table->string('date');
 
 
         });

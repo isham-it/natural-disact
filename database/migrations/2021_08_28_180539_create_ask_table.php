@@ -13,7 +13,7 @@ class CreateAskTable extends Migration
      */
     public function up()
     {
-        Schema::create('ask', function (Blueprint $table) {
+        Schema::create('asks', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->timestamps();

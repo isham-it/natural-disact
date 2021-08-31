@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 
-class help_offerSeeder extends Seeder
+class OfferSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class help_offerSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('offer')->insert([
+        DB::table('offers')->insert([
 
             'title' => 'flood',
 

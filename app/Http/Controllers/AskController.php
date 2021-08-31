@@ -16,6 +16,7 @@ class AskController extends Controller
     }
 
 
+
     public function show($id)
     {
         // Grab the Ask
@@ -42,20 +43,33 @@ class AskController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate automatically return back() to previous page if errors
-        $validated = $request->validate([
-            'title' => 'required|max:300',
-
+        // + Validations
+        $validations = Validator::make($request->all(), [
+            'title' => 'required|max:50',
+            //'description' => 'required',
+            //'city' => 'required',
+            // user id will delate after INNER JOIN
+            //'user_id'=>'required',
+            //'type' => 'required',
         ]);
-
-        $ask = new Ask;
-
-        $ask->title = $request->title;
-
-        $ask->save();
-
-        // redirect to offers list with a message
-        return redirect('asks')->with('success', $request->title . ' was created successfully');
+ 
+        // Message
+        if ($validations->fails())
+            return response()->json(['errors' => $validations->errors()->all()]);
+        //$offer = new Ask();
+            //$offer->title = $request->title;
+            $ask = new Ask;
+                $ask->title = $request->title;
+            
+            //$helpOffer->user_id = $request->user_id;
+            //$helpOffer->description = $request->description;
+            //$helpOffer->capacity = $request->capacity;
+           //$helpOffer->type = $request->type;
+            //$helpOffer->city = $request->city;
+            //$helpOffer->date = $request->date;
+            $ask->save();
+    
+            return response()->json(['success', $request->title . ' was created successfully']);
     }
 
 
@@ -109,6 +123,9 @@ class AskController extends Controller
         // redirect to flowers list with a message
         return redirect('asks')->with('success', 'ask annonce deleted');
     }
+
+    
+
 
 }
 

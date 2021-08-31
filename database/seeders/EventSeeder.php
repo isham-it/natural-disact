@@ -15,7 +15,7 @@ class EventSeeder extends Seeder
     public function run()
     {
 
-        DB::table('event')->insert([
+        DB::table('events')->insert([
 
             'title' => 'flood',
             'description' => 'lorem ipsum lorem ipsum ',
