@@ -1,12 +1,23 @@
+:root {
+    --storm: #7a8189;
+    --weathered-grey: rgb(80, 81, 73);
+    --sterling: #d5d7d2;
+    --harvard-slate: #918e87;
+    --brownstone: #aca48d;
+    --heritage-blue: #285e7a;
+}
+
 form {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
     border-style: inset;
     border: 3px solid;
-    border-color: red;
-    box-shadow: 33px -26px 0px 0px rgba(0, 0, 0, 0.75);
+    border-color: #285e7a;
+    border: 4mm ridge rgba(80, 81, 73, .6);
     text-align: center;
+    background-color: #d5d7d2;
+    padding: 15px;
 }
 
 body {
@@ -21,6 +32,11 @@ body {
 #password,
 #password_confirmation {
     text-align: center;
-    background-color: violet;
+    background-color: white;
     font-family: inherit;
+    font-family: 'Kaisei Decol', serif;
+}
+
+.ml-4 {
+    background-color: #d5d7d2;
 }
