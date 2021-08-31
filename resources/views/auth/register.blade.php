@@ -1,6 +1,8 @@
 <x-guest-layout>
 
-@include('layouts.nav')
+
+@include('layouts.mytemplate')
+
 
 <form class="formulaire" method="POST" action="{{ route('register') }}">
             @csrf

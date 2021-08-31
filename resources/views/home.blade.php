@@ -3,7 +3,7 @@
 @section('title', 'home page')
 
 
-
+<body id="homeBody">
 @section('content')
 
    <h1>HOMEEPAGE</h1>
