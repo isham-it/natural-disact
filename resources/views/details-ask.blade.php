@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <p><strong>Name : </strong> {{$ask->title}}</p>
+    <p ><strong>Name : </strong> {{$ask->title}}</p>
 
 
     <hr>

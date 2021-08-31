@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="ask.css">
 @endsection
 
-
 <body id="askBody">
 @section('content')
 
