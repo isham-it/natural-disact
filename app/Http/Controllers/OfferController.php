@@ -89,7 +89,7 @@ class OfferController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         $offer = Offer::find($id);
 
         $offer->title = $request->title;
@@ -111,7 +111,7 @@ class OfferController extends Controller
     {
         Offer::destroy($id);
 
-        return redirect('offers')->with('success', 'offer annonce deleted');
+        return redirect('offers')->with('success', 'offer deleted');
     }
 
 }

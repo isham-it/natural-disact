@@ -2,17 +2,18 @@
 
 @section('title', 'home page')
 
+<link rel="stylesheet" href="{{ URL::asset('public/css/nav.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('public/css/main.css') }}">
 
 
 @section('content')
-
-   <h1>HOMEEPAGE</h1>
+   <h1>home page</h1>
 
 <nav>
     <ul>
 
-        <li><a href="{{ url('offers') }}">offerrrrrs</a></li>
-        <li><a href="{{ url('asks') }}">asksssss</a></li>
+        <a href="{{ url('asks') }}">ask-- </a>
+        <a href="{{ url('offers') }}">offers</a>
 
     </ul>
 </nav>
