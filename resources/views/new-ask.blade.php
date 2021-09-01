@@ -2,11 +2,12 @@
 
 @section('title', 'Add a help offer')
 @section('css')
-    <link rel="stylesheet" href="offer.css">
+    <link rel="stylesheet" href="ask.css">
 @endsection
 @section('content')
 
     <h3>Add a new offer</h3>
+
 
 
 
@@ -43,6 +44,7 @@
             $('#myForm').submit(function(e) {
                 e.preventDefault();
 
+
                 // Ajax call
                 $.ajax({
                         url: "{{ route('submit.ajax.form') }}",
@@ -50,13 +52,12 @@
                         data: $("form").serialize(),
                         dataType: 'json',
                         success: function(response) {
-                            window.location.href = "offers";
+                            window.location.href = "asks";
                         }
                     })
                     .done(function(result) {
                         // If AJAX call worked
                         console.log('SUCCESS');
-                        //Redirect::to('offers')->with('message.success', 'Success Add');
 
                     })
                     .fail(function(result) {

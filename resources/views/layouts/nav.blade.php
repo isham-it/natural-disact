@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
  <title>navbar</title>
  <link rel="stylesheet" href="{{ URL::asset('public/css/nav.css') }}">
@@ -27,4 +28,5 @@
 
 
 </body>
+
 </html>

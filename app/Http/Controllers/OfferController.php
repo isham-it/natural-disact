@@ -47,21 +47,30 @@ class OfferController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate automatically return back() to previous page if errors
-        $validated = $request->validate([
-            'title' => 'required|max:300',
-
+         // + Validations
+         $validations = Validator::make($request->all(), [
+            'title' => 'required|max:50',
+            //'description' => 'required',
+            //'city' => 'required',
+            // user id will delate after INNER JOIN
+            //'user_id'=>'required',
+            //'type' => 'required',
         ]);
 
+        // Message
+        if ($validations->fails())
+            return response()->json(['errors' => $validations->errors()->all()]);
         $offer = new Offer;
-
-        $offer->title = $request->title;
-
-        $offer->save();
-
-        // redirect to offers list with a message
-        return redirect('offers')->with('success', $request->title . ' was created successfully');
-    }
+            $offer->title = $request->title;
+            //$helpOffer->user_id = $request->user_id;
+            //$helpOffer->description = $request->description;
+            //$helpOffer->capacity = $request->capacity;
+           //$helpOffer->type = $request->type;
+            //$helpOffer->city = $request->city;
+            //$helpOffer->date = $request->date;
+            $offer->save();
+    
+            return response()->json(['success', $request->title . ' was created successfully']);    }
 
 
     /**

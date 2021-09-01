@@ -13,7 +13,7 @@ class createOfferTable extends Migration
      */
     public function up()
     {
-        Schema::create('offer', function (Blueprint $table) {
+        Schema::create('offers', function (Blueprint $table) {
             $table->id();
              $table->string('title');
             $table->timestamps();
