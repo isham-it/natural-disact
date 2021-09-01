@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AskController;
 use App\Http\Controllers\OfferController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
+
+
+
 //use App\Models\Ask;
 //use App\Models\Offer;
 
@@ -84,4 +89,6 @@ Route::post('/update/ask/{id}', [AskController::class, 'update']);
 // Show the form to update a offer
 Route::get('/update/offer/{id}', [OfferController::class, 'edit'])->name('update.offer');
 Route::post('/update/offer/{id}', [OfferController::class, 'update']);
+
+
 

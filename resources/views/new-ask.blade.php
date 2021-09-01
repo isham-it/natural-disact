@@ -2,12 +2,12 @@
 
 @section('title', 'Add a help offer')
 @section('css')
-    <link rel="stylesheet" href="style_form.css">
+    <link rel="stylesheet" href="ask.css">
 @endsection
 @section('content')
 
     <h3>Add a new offer</h3>
-    
+
 
 
 
@@ -43,13 +43,13 @@
         $(function() {
             $('#myForm').submit(function(e) {
                 e.preventDefault();
-                
+
 
                 // Ajax call
                 $.ajax({
                         url: "{{ route('submit.ajax.form') }}",
                         method: 'post',
-                        data:$("form").serialize(),
+                        data: $("form").serialize(),
                         dataType: 'json',
                         success: function(response) {
                             window.location.href = "asks";
@@ -58,7 +58,7 @@
                     .done(function(result) {
                         // If AJAX call worked
                         console.log('SUCCESS');
-                          
+
                     })
                     .fail(function(result) {
                         // Fail means : file not found, 500 errors.
