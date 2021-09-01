@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ URL::asset('public/css/nav.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('public/css/main.css') }}">
 
-
+<body id="homeBody">
 @section('content')
    <h1>home page</h1>
 

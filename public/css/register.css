@@ -1,0 +1,43 @@
+:root {
+    --storm: #7a8189;
+    --weathered-grey: rgb(80, 81, 73);
+    --sterling: #d5d7d2;
+    --harvard-slate: #918e87;
+    --brownstone: #aca48d;
+    --heritage-blue: #285e7a;
+}
+
+form {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border: 3px solid;
+    border-color: #285e7a;
+    border: 4mm ridge rgba(80, 81, 73, .6);
+    text-align: center;
+    background-color: #d5d7d2;
+    padding: 15px;
+}
+
+body {
+    background-color: var(--sterling);
+}
+
+#username,
+#name,
+#email,
+#city,
+#phone,
+#password,
+#password_confirmation {
+    text-align: center;
+    background-color: white;
+    font-family: inherit;
+    font-family: 'Kaisei Decol', serif;
+}
+
+.ml-4 {
+    background-color: rgb(80, 81, 73);
+    ;
+}

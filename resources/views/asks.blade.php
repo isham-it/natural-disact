@@ -3,7 +3,7 @@
 @section('title', 'Detail page')
 
 
-
+<body id="askBody">
 @section('content')
 
 @if($message = Session::get('success'))
@@ -22,3 +22,4 @@
     @endforeach
 
 @endsection
+

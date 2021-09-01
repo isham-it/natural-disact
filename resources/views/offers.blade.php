@@ -3,7 +3,7 @@
 @section('title', 'Detail page')
 
 
-
+<body id="offerBody">
 @section('content')
 
 @if($message = Session::get('success'))

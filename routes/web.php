@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+
 Route::get('/home', function () {
     return view('home');
 });
@@ -30,13 +31,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
-//verification email
-
-//Auth::routes(['verify'=>true]);
-
-
-
 
 Route::get('/event', function () {
     return view('event');
