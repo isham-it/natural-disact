@@ -21,7 +21,7 @@ form {
 }
 
 body {
-    background-color: #918e87;
+    background-color: var(--sterling);
 }
 
 #username,

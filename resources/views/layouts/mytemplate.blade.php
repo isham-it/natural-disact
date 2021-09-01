@@ -23,7 +23,6 @@
             <p>This is my SPECIAL footer</p>
     </footer>
 </body>
-@include('auth.register')
 
 
 
