@@ -149,36 +149,38 @@ footer {
     background-color: var(--dark-grey-footer);
 }
 
-footer ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-}
+display: flex;
+align-items: center;
+justify-content: center;
+list-style: none;
 
+}
 footer a {
     color: var(--text-white);
     padding: 20px 10px;
     display: inline-block;
     font-size: 20px;
 }
-
 @media screen and (min-width: 720px) {
     main {
         width: 700px;
         margin: auto;
     }
+    
     nav.nav-bar {
         padding: 20px 0;
     }
+    
     nav.nav-bar button {
         display: none;
     }
+    
     nav.nav-bar ul {
         display: flex;
         align-items: center;
         list-style: none;
     }
+    
     nav.nav-bar ul a {
         color: black;
         text-decoration: none;
@@ -188,10 +190,12 @@ footer a {
         color: var(--grey-text);
         font-weight: bold;
     }
+    
     nav.nav-bar ul a.active {
         color: black;
         text-decoration: underline;
     }
+    
     form {
         text-align: center;
         width: 350px;
@@ -204,13 +208,16 @@ footer a {
         transform: translate(-50%, 50%);
     }*/
     /*register login*/
+    
     .ml-4 {
         background-color: rgb(80, 81, 73);
         ;
     }
+    
     .ml-3 {
         background-color: rgb(80, 81, 73);
     }
+    
     #username,
     #name,
     #email,
@@ -224,15 +231,11 @@ footer a {
         font-family: 'Kaisei Decol', serif;
     }
 }
-
 footer {
     bottom: 0;
 }
 
-
 /*BONUS*/
-
 @media screen and (min-width: 1080px) {}
-
 
 /* More CSS ? Write it here !*/

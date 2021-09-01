@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 
-class help_requestSeeder extends Seeder
+class AskSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class help_requestSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('ask')->insert([
+        DB::table('asks')->insert([
 
             'title' => 'hurry',
 

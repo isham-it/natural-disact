@@ -1,0 +1,78 @@
+:root {
+    --storm: #7a8189;
+    --weathered-grey: #505149;
+    --sterling: #d5d7d2;
+    --harvard-slate: #918e87;
+    --brownstone: #aca48d;
+    --heritage-blue: #285e7a;
+}
+
+body {
+    background-color: var(--sterling);
+}
+
+#button {
+    background-color: var(--heritage-blue);
+    text-align: center;
+    padding: 2px;
+    display: flex;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 50px 30px;
+    width: 14%;
+    margin-right: auto;
+    font-family: 'Merriweather', serif;
+    border-radius: 10px;
+    color: var(--sterling);
+    text-align: center;
+}
+
+#title {
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    font-family: 'Merriweather', serif;
+    color: var(--sterling);
+    text-align: center;
+}
+
+#link {
+    text-align: center;
+}
+
+#card {
+    border-radius: 30px;
+    background-color: var(--heritage-blue);
+    width: 24%;
+    height: 50%;
+    margin-right: auto;
+    padding: 5px;
+    margin-bottom: 50px;
+    gap: 4px;
+    font-family: 'Merriweather', serif;
+    border: 2px solid;
+}
+
+#card a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: var(--sterling);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #dddddd;
+}

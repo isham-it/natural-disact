@@ -7,7 +7,7 @@
 
             <!-- username -->
 
-            
+
             <div>
                 <x-label for="username" :value="__('USERNAME')" class="titleForm" />
 
@@ -25,20 +25,20 @@
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autofocus placeholder="Enter your last name"/>
             </div>
-            
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('EMAIL')" class="titleForm"/>
-                
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required 
+
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
                 placeholder="Enter your email"/>
             </div>
-            
+
             <!-- City -->
             <div>
                 <x-label for="city" :value="__('CITY')" class="titleForm"/>
 
-                <x-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required autofocus 
+                <x-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required autofocus
                 placeholder="Enter your city"/>
             </div>
 
@@ -46,7 +46,7 @@
             <div>
                 <x-label for="phone" :value="__('PHONE')" class="titleForm"/>
 
-                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus 
+                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus
                 placeholder="Enter your phone number"/>
             </div>
 
@@ -67,21 +67,21 @@
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
-                                name="password_confirmation" required 
+                                name="password_confirmation" required
                                 placeholder="Confirm your password"/>
             </div>
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
-                
+
                 <x-button class="ml-4">
                     {{ __('Register') }}
                 </x-button>
             </div>
-        
+
         </form>
-        
-        
-        
+
+
+
 </x-guest-layout>

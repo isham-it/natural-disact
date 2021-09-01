@@ -4,6 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AskController;
 use App\Http\Controllers\OfferController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
+
+
+
+//use App\Models\Ask;
+//use App\Models\Offer;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -64,12 +73,14 @@ Route::get('/delete/ask/{id}', [AskController::class, 'destroy'])->name('delete.
 Route::get('/delete/offer/{id}', [OfferController::class, 'destroy'])->name('delete.offer');
 
 // Show the form to create an offer
-Route::get('/new-offer', [OfferController::class, 'create']);
-Route::post('/new-offer', [OfferController::class, 'store']);
+Route::get('/new-offer', [OfferController::class, 'create'])->name('show.ajax.form');
+
+Route::post('/new-offer', [OfferController::class, 'store'])->name('submit.ajax.form');
 
 // Show the form to create an ask
-Route::get('/new-ask', [AskController::class, 'create']);
-Route::post('/new-ask', [AskController::class, 'store']);
+Route::get('/new-ask', [AskController::class, 'create'])->name('show.ajax.form');
+
+Route::post('/new-ask', [AskController::class, 'store'])->name('submit.ajax.form');
 
 // Show the form to update an ask
 Route::get('/update/ask/{id}', [AskController::class, 'edit'])->name('update.ask');
@@ -78,3 +89,6 @@ Route::post('/update/ask/{id}', [AskController::class, 'update']);
 // Show the form to update a offer
 Route::get('/update/offer/{id}', [OfferController::class, 'edit'])->name('update.offer');
 Route::post('/update/offer/{id}', [OfferController::class, 'update']);
+
+
+

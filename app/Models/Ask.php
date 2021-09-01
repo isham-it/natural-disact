@@ -9,7 +9,7 @@ class Ask extends Model
 {
     use HasFactory;
     public $timestamps = true;
-    
+
     protected $fillable = ['title'];
 
 }

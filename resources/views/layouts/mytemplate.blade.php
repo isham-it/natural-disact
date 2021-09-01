@@ -7,16 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/main.css">
     <title>@yield('title')</title>
+    <link rel="stylesheet" href="{{ URL::asset('public/css/nav.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('public/css/main.css') }}">
 </head>
 @include('layouts.nav')
 
 <body>
 
+
     <div class="content">
         @yield('content')
-    </div>
+   </div>
 
-    
+
     @yield('scripts')
 
     <footer>
