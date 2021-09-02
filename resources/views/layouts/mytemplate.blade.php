@@ -15,24 +15,10 @@
 @include('layouts.nav')
 
 <body>
-
-
-    //=========================================
-    
-    //=========================================
-
     <div class="content">
         @yield('content')
    </div>
 
-
     @yield('scripts')
-
-    <footer>
-            <p>This is my SPECIAL footer</p>
-    </footer>
 </body>
-
-
-
 </html>
