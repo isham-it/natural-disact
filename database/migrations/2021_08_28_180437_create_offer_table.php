@@ -17,10 +17,8 @@ class createOfferTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->string('type');
             $table->string('city');
-            
-
+            $table->string('date');
 
             $table->timestamps();
         });

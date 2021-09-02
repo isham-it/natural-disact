@@ -91,24 +91,31 @@
 
                         <div id="logo_div">
                             <img id="logo" src="img/logo.png" alt="logo">
-                            <h1 class="my-0 site-logo"><a href="{{ url('home') }}"> <span id="logo_span">DIS'ACT</span> </a></h1>
+                            <h1 class="my-0 site-logo"><a href="{{ url('home') }}"> <span
+                                        id="logo_span">DIS'ACT</span> </a></h1>
                         </div>
 
                     </div>
                     <div class="col-10">
                         <nav class="site-navigation text-right" role="navigation">
                             <div class="container">
-                                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+                                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                                        class="site-menu-toggle js-menu-toggle text-white"><span
+                                            class="icon-menu h3"></span></a></div>
 
                                 <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-                                    <li class="active"><a href="{{ url('home') }}" class="nav-link">Home</a></li>
+                                    <li class="active"><a href="{{ url('home') }}"
+                                            class="nav-link">Home</a></li>
 
                                     <li class="has-children">
                                         <a href="#" class="nav-link">Services</a>
                                         <ul class="dropdown arrow-top">
-                                            <li><a href="{{ url('offers') }}" class="nav-link">Help offers</a></li>
-                                            <li><a href="{{ url('asks') }}" class="nav-link">Help requests</a></li>
-                                            <li><a href="{{ url('accords') }}" class="nav-link">Successes</a></li>
+                                            <li><a href="{{ url('offers') }}" class="nav-link">Help offers</a>
+                                            </li>
+                                            <li><a href="{{ url('asks') }}" class="nav-link">Help requests</a>
+                                            </li>
+                                            <li><a href="{{ url('accords') }}" class="nav-link">Successes</a>
+                                            </li>
                                             <!-- <li class="has-children">
                           <a href="#">More Links</a>
                           <ul class="dropdown">
@@ -126,7 +133,8 @@
                                         <ul class="dropdown arrow-top">
                                             <li><a href="{{ url('login') }}" class="nav-link">Log In</a></li>
                                             <li><a href="{{ url('logout') }}" class="nav-link">Log Out</a></li>
-                                            <li><a href="{{ url('register') }}" class="nav-link">Register</a></li>
+                                            <li><a href="{{ url('register') }}" class="nav-link">Register</a>
+                                            </li>
                                         </ul>
                                     </li>
 

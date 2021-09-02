@@ -6,8 +6,7 @@ use App\Http\Controllers\AskController;
 use App\Http\Controllers\OfferController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
-
-
+use Illuminate\Support\Facades\Auth;
 
 //use App\Models\Ask;
 //use App\Models\Offer;
@@ -54,6 +53,7 @@ Route::get('/contact', function () {
 
 
 
+
 // CREATE THE ROUTE TO DISPLAY ONE SPECIFIC PAGE of HelpOffer
 Route::get('/offer/{id}', [OfferController::class, 'show'])->name('details.offer');
 
@@ -97,6 +97,40 @@ Route::get('/accords/{offer_id}/{title}', [AccordController::class, 'index'])->n
 // CREATE THE ROUTE TO DISPLAY ONE SPECIFIC accord
 Route::get('/accord/{id}', [AccordController::class, 'show'])->name('details.accord');
 
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function(){
+    return view('dashboard');
+})->name('dashboard');
+
+/*
+// mail verification 
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+/////////////////////////////////////////////////
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return redirect('/home');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+
+
+//////////////////////////////////////////////////////////
+
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+Route::get('/profile', function () {
+    // Only verified users may access this route...
+})->middleware('verified');
+*/
 
 
 
