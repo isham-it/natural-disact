@@ -12,14 +12,13 @@
 
 
     <div id="results"></div>
-    <form id="myForm" action="" method="post">
+    <form ="myForm" action="" method="post">
         <!-- Security token for Laravel : Mandatory in forms -->
         @csrf
 
         <label for="">Title</label>
         <input type="text" name="title" placeholder="Title"><br>
-        <label for="">User ID</label>
-        <input type="number" name="user_id" placeholder="Title"><br>
+
         <label for="">Description</label>
         <input type="text" name="description" placeholder="description"><br>
         <label for="">City</label>
@@ -47,17 +46,17 @@
 
                 // Ajax call
                 $.ajax({
-                        url: "{{ route('submit.ajax.form') }}",
+                        url: "{{ route('submit.ask.form') }}",
                         method: 'post',
                         data: $("form").serialize(),
                         dataType: 'json',
-                        success: function(response) {
-                            window.location.href = "asks";
+                        //success: function(response) {
+                            //window.location.href = "asks";
                         }
                     })
                     .done(function(result) {
                         // If AJAX call worked
-                        console.log('SUCCESS');
+                        console.log(result);
 
                     })
                     .fail(function(result) {

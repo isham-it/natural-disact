@@ -35,7 +35,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('home');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
@@ -78,9 +78,9 @@ Route::get('/new-offer', [OfferController::class, 'create'])->name('show.ajax.fo
 Route::post('/new-offer', [OfferController::class, 'store'])->name('submit.ajax.form');
 
 // Show the form to create an ask
-Route::get('/new-ask', [AskController::class, 'create'])->name('show.ajax.form');
+Route::get('/new-ask', [AskController::class, 'create'])->name('show.ask.form');
 
-Route::post('/new-ask', [AskController::class, 'store'])->name('submit.ajax.form');
+Route::post('/new-ask', [AskController::class, 'store'])->name('submit.ask.form');
 
 // Show the form to update an ask
 Route::get('/update/ask/{id}', [AskController::class, 'edit'])->name('update.ask');
