@@ -6,6 +6,7 @@ use App\Http\Controllers\AskController;
 use App\Http\Controllers\OfferController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ApiController;
 
 
 
@@ -91,4 +92,10 @@ Route::get('/update/offer/{id}', [OfferController::class, 'edit'])->name('update
 Route::post('/update/offer/{id}', [OfferController::class, 'update']);
 
 
+Route::get('/dashboard', [ApiController::class, 'getApi']);
 
+
+
+
+
+Route::get('/read-api', [ApiController::class, 'getApiContent']);
