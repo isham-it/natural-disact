@@ -3,10 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AskController;
+use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\OfferController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
-use App\Http\Controllers\ApiController;
+
 
 
 
@@ -92,10 +93,16 @@ Route::get('/update/offer/{id}', [OfferController::class, 'edit'])->name('update
 Route::post('/update/offer/{id}', [OfferController::class, 'update']);
 
 
-Route::get('/dashboard', [ApiController::class, 'getApi']);
+/*Route::get('/dashboard', [ApiController::class, 'getApi']);
 
 
 
 
 
-Route::get('/read-api', [ApiController::class, 'getApiContent']);
+
+
+Route::get('/api/get-api', [ApiController::class, 'getCitys']);
+Route::get('/api/get-api/city={city}', [ApiController::class, 'getCity']);*/
+
+
+Route::get('/weather', [WeatherController::class, 'getWeather']);

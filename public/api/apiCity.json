@@ -12,7 +12,9 @@
     {
         "city": "Akescht"
     },
-    { "city": "Alf" },
+    {
+        "city": "Alf"
+    },
     {
         "city": "Allerborn"
     },
@@ -37,7 +39,9 @@
     {
         "city": "Alzingen"
     },
-    { "city": "Angelsberg" },
+    {
+        "city": "Angelsberg"
+    },
     {
         "city": "Ansembourg"
     },
