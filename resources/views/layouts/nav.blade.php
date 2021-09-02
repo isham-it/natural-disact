@@ -21,6 +21,7 @@
             <li><a href="{{ url('contact') }}">contact us </a></li>
             <li><a href="{{ url('register') }}">Register</a></li>
             <li><a href="{{ url('login') }}">Login</a></li>
+            <li><a href="{{ url('logout') }}">Logout</a></li>
             <li><a href="{{ url('event') }}">Event page</a></li>
         </ul>
     </nav>

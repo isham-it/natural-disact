@@ -46,29 +46,32 @@ class AskController extends Controller
         // + Validations
         $validations = Validator::make($request->all(), [
             'title' => 'required|max:50',
-            //'description' => 'required',
-            //'city' => 'required',
+            
+            'description' => 'required',
+            'city' => 'required',
+            'capacity'=>'required',
             // user id will delate after INNER JOIN
-            //'user_id'=>'required',
-            //'type' => 'required',
+            'date' => 'required',
+
         ]);
- 
+
         // Message
         if ($validations->fails())
             return response()->json(['errors' => $validations->errors()->all()]);
         //$offer = new Ask();
             //$offer->title = $request->title;
             $ask = new Ask;
-                $ask->title = $request->title;
-            
-            //$helpOffer->user_id = $request->user_id;
-            //$helpOffer->description = $request->description;
-            //$helpOffer->capacity = $request->capacity;
-           //$helpOffer->type = $request->type;
-            //$helpOffer->city = $request->city;
-            //$helpOffer->date = $request->date;
+
+
+            $ask->title = $request->title;
+            //$ask->user_id = $request->user_id;
+            $ask->description = $request->description;
+            // $ask->capacity = $request->capacity;
+            $ask->type = $request->type;
+            $ask->city = $request->city;
+            $ask->date = $request->date;
             $ask->save();
-    
+
             return response()->json(['success', $request->title . ' was created successfully']);
     }
 
@@ -121,10 +124,10 @@ class AskController extends Controller
         //DB::delete('DELETE FROM flowers WHERE id = ?', [$id]);
 
         // redirect to flowers list with a message
-        return redirect('asks')->with('success', 'ask annonce deleted');
+        return redirect('asks')->with('success', 'ask deleted');
     }
 
-    
+
 
 
 }
