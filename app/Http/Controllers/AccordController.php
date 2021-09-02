@@ -13,7 +13,7 @@ class AccordController extends Controller
     {
 
 
-        $accord = Accord::create([
+        $accords = Accord::create([
             'user_id' => Auth::id(),
             'offer_id' => $offer_id,
             'title' => $title,

@@ -65,7 +65,6 @@ class OfferController extends Controller
             return response()->json(['errors' => $validations->errors()->all()]);
         $offer = new Offer;
             $offer->title = $request->title;
-            //$offer->user_id = $request->user_id;
             $offer->description = $request->description;
             $offer->capacity = $request->capacity;
             $offer->city = $request->city;
