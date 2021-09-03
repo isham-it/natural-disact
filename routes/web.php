@@ -6,8 +6,7 @@ use App\Http\Controllers\AskController;
 use App\Http\Controllers\OfferController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
-
-
+use Illuminate\Support\Facades\Auth;
 
 //use App\Models\Ask;
 //use App\Models\Offer;
@@ -54,6 +53,7 @@ Route::get('/contact', function () {
 
 
 
+
 // CREATE THE ROUTE TO DISPLAY ONE SPECIFIC PAGE of HelpOffer
 Route::get('/offer/{id}', [OfferController::class, 'show'])->name('details.offer');
 
@@ -96,6 +96,13 @@ Route::get('/accords/{offer_id}/{title}', [AccordController::class, 'index'])->n
 
 // CREATE THE ROUTE TO DISPLAY ONE SPECIFIC accord
 Route::get('/accord/{id}', [AccordController::class, 'show'])->name('details.accord');
+
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function(){
+    return view('dashboard');
+})->name('dashboard');
+
 
 
 

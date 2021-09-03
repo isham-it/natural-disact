@@ -10,7 +10,7 @@
     <script src="js/bootstrap.js"></script>
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ URL::asset('public/css/nav.css') }}">
-   {{-- <linkrel="stylesheet"href="URL::asset('public/css/main.css') --}}
+    {{-- <linkrel="stylesheet"href="URL::asset('public/css/main.css') --}}
 
 
 </head>
@@ -19,8 +19,13 @@
 <body>
     <div class="content">
         @yield('content')
-   </div>
+    </div>
 
     @yield('scripts')
+
+    <footer>
+        <p>This is my SPECIAL footer</p>
+    </footer>
 </body>
+
 </html>

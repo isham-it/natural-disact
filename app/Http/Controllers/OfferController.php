@@ -52,9 +52,12 @@ class OfferController extends Controller
             'title' => 'required|max:50',
             'description' => 'required',
             'city' => 'required',
-             //user id will delate after INNER JOIN
-            'user_id'=>'required',
-            'type' => 'required'
+            'capacity' => 'required', 
+            'date' => 'required'
+
+            // user id will delate after INNER JOIN
+            //'user_id'=>'required',
+            //'type' => 'required',
         ]);
 
         // Message
@@ -62,10 +65,9 @@ class OfferController extends Controller
             return response()->json(['errors' => $validations->errors()->all()]);
         $offer = new Offer;
             $offer->title = $request->title;
-            //$Offer->user_id = $request->user_id;
+            //$offer->user_id = $request->user_id;
             $offer->description = $request->description;
             $offer->capacity = $request->capacity;
-            $offer->type = $request->type;
             $offer->city = $request->city;
             $offer->date = $request->date;
             $offer->save();

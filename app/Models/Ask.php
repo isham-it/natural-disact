@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Ask extends Model
 {
     use HasFactory;
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = ['title','description','city','capacity','date'];
 

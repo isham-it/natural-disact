@@ -48,16 +48,22 @@
                         url: "{{ route('submit.ajax.form') }}",
                         method: 'post',
                         data: $("form").serialize(),
-                        dataType: 'json',
+                        //dataType: 'json',
                         success: function(response) {
                             window.location.href = "offers";
                         }
                     })
                     .done(function(result) {
-                        // If AJAX call worked
-                        console.log('SUCCESS');
-                        //Redirect::to('offers')->with('message.success', 'Success Add');
-
+                        $('#results').html('Add with Success!!');
+                        console.log('IT WORK BITCH');
+                        // Did we get errors or success ?
+                        if (result.errors) {
+                            for (const error of result.errors) {
+                                $('#results').append(error + "<br>");
+                            }
+                        } else if (result.success) {
+                            $('#results').html(result.success);
+                        }
                     })
                     .fail(function(result) {
                         // Fail means : file not found, 500 errors.
