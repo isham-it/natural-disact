@@ -1,6 +1,6 @@
 @extends('layouts.mytemplate')
 
-@section('title', 'home page')
+@section('title', 'Home Page')
 
 <link rel="stylesheet" href="{{ URL::asset('public/css/nav.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('public/css/main.css') }}">

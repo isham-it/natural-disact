@@ -9,7 +9,7 @@ class Event extends Model
 {
     use HasFactory;
 
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
 
@@ -17,7 +17,7 @@ class Event extends Model
         'description',
         'poster',
         'date'
-        
+
     ];
 
 }
