@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Event as FacadesEvent;
 class EventController extends Controller
 {
 
-        public function show()
+        public function index()
         {
             $events = Event::all();
 

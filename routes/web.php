@@ -42,7 +42,7 @@ require __DIR__.'/auth.php';
 
 
 
-Route::get('/event', [EventController::class, 'show']);
+Route::get('/event', [EventController::class, 'index']);
 
 Route::get('/about', function () {
     return view('about');

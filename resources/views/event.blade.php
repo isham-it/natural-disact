@@ -9,19 +9,10 @@
 
 @section('content')
 
-@foreach ($events as $event)
-
-
 <p><strong>Title : </strong> {{ $event->title }}</p>
-
-
-
-
-@endforeach
-
-
-
-
-
+<p><strong>description : </strong> {{ $event->description }}</p>
+<p><strong>poster : </strong> {{ $event->poster }}</p>
+<p><strong>date : </strong> {{ $event->date }}</p>
 
 @endsection
+description
