@@ -1,12 +1,27 @@
 @extends('layouts.mytemplate')
 
-@section('title', 'eventt')
+@section('title', 'Event page')
 
-
+@section('css')
+    <link href="{{ URL::asset('public/css/main.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('public/css/event.css') }}" rel="stylesheet">
+@endsection
 
 @section('content')
 
-   <h1>event</h1>
+@foreach ($events as $event)
+
+
+<p><strong>Title : </strong> {{ $event->title }}</p>
+
+
+
+
+@endforeach
+
+
+
+
 
 
 @endsection

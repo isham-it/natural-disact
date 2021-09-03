@@ -16,7 +16,8 @@ class Event extends Model
         'title',
         'description',
         'poster',
-        'date' => 'datetime:dd/mm/YYYY',
+        'date'
+        
     ];
 
 }

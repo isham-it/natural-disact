@@ -9,7 +9,7 @@ class Offer extends Model
 {
     use HasFactory;
     public $timestamps = true;
-    protected $fillable = ['title'];
+    protected $fillable = ['title','description','city','capacity','date'];
 
 
 }

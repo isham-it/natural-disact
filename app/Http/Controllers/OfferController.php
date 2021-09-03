@@ -50,11 +50,11 @@ class OfferController extends Controller
          // + Validations
          $validations = Validator::make($request->all(), [
             'title' => 'required|max:50',
-            //'description' => 'required',
-            //'city' => 'required',
-            // user id will delate after INNER JOIN
-            //'user_id'=>'required',
-            //'type' => 'required',
+            'description' => 'required',
+            'city' => 'required',
+             //user id will delate after INNER JOIN
+            'user_id'=>'required',
+            'type' => 'required'
         ]);
 
         // Message
@@ -62,14 +62,14 @@ class OfferController extends Controller
             return response()->json(['errors' => $validations->errors()->all()]);
         $offer = new Offer;
             $offer->title = $request->title;
-            //$helpOffer->user_id = $request->user_id;
-            //$helpOffer->description = $request->description;
-            //$helpOffer->capacity = $request->capacity;
-           //$helpOffer->type = $request->type;
-            //$helpOffer->city = $request->city;
-            //$helpOffer->date = $request->date;
+            //$Offer->user_id = $request->user_id;
+            $offer->description = $request->description;
+            $offer->capacity = $request->capacity;
+            $offer->type = $request->type;
+            $offer->city = $request->city;
+            $offer->date = $request->date;
             $offer->save();
-    
+
             return response()->json(['success', $request->title . ' was created successfully']);    }
 
 

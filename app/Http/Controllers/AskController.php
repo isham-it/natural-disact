@@ -46,7 +46,7 @@ class AskController extends Controller
         // + Validations
         $validations = Validator::make($request->all(), [
             'title' => 'required|max:50',
-            
+
             'description' => 'required',
             'city' => 'required',
             'capacity'=>'required',
@@ -58,7 +58,7 @@ class AskController extends Controller
         // Message
         if ($validations->fails())
             return response()->json(['errors' => $validations->errors()->all()]);
-        //$offer = new Ask();
+            //$offer = new Ask();
             //$offer->title = $request->title;
             $ask = new Ask;
 
@@ -66,7 +66,7 @@ class AskController extends Controller
             $ask->title = $request->title;
             //$ask->user_id = $request->user_id;
             $ask->description = $request->description;
-            // $ask->capacity = $request->capacity;
+            $ask->capacity = $request->capacity;
             $ask->type = $request->type;
             $ask->city = $request->city;
             $ask->date = $request->date;

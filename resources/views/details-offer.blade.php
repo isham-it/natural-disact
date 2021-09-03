@@ -6,9 +6,11 @@
 
 @section('content')
 
-    <p><strong>Name : </strong> {{$offer->title}}</p>
+    <p><strong>Date : </strong> {{$offer->date}}</p>
+    <p><strong>Title : </strong> {{$offer->title}}</p>
+    <p><strong>Description : </strong> {{$offer->description}}</p>
+    <p><strong>City : </strong> {{$offer->city}}</p>
+    <p><strong>Capacity : </strong>{{$offer->capacity}}</p>
 
 
-    <hr>
-    
-@endsection
+    @endsection
