@@ -13,8 +13,8 @@ use Illuminate\Contracts\Auth\CanResetPassword;
 
 
 
-class User extends Authenticatable 
-    use HasApiTokens, HasFactory, Notifiable;
+class User extends Authenticatable implements MustVerifyEmail {
+    use HasApiTokens,HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
