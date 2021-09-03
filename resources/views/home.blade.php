@@ -8,6 +8,9 @@
 <body id="homeBody">
     @section('content')
 
+<nav>
+
+    <ul>
 
 
     <nav id="home_nav">

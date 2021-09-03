@@ -5,20 +5,23 @@ namespace App\Http\Controllers;
 use App\Models\event;
 use Illuminate\Console\Scheduling\Event as SchedulingEvent;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Event as FacadesEvent;
 
 class EventController extends Controller
 {
-    public function index()
-    {
-        $events = Event::all();
 
-        foreach ($events as $event) {
-            echo 'Date : ' . $event->date;
-            echo 'Title : ' . $event->title;
-            echo 'Description : ' . $event->description;
-            echo 'Poster : ' . $event->poster;
-        
+        public function index()
+        {
+            $events = Event::all();
+
+            return view('event', ['event' => $events]);
+
+
+
 
         }
-    }
+
+
+
 }
+

@@ -40,9 +40,9 @@ Route::get('/home', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/event', function () {
-    return view('event');
-});
+
+
+Route::get('/event', [EventController::class, 'index']);
 
 Route::get('/about', function () {
     return view('about');

@@ -10,7 +10,9 @@
     <script src="js/bootstrap.js"></script>
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ URL::asset('public/css/nav.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('public/css/main.css') }}">
+   {{-- <linkrel="stylesheet"href="URL::asset('public/css/main.css') --}}
+
+
 </head>
 @include('layouts.nav')
 
