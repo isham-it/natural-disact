@@ -17,8 +17,6 @@
 
         <label for="">Title</label>
         <input type="text" name="title" placeholder="Title"><br>
-        <label for="">User ID</label>
-        <input type="number" name="user_id" placeholder="Title"><br>
         <label for="">Description</label>
         <input type="text" name="description" placeholder="description"><br>
         <label for="">City</label>
@@ -45,10 +43,10 @@
 
                 // Ajax call
                 $.ajax({
-                        url: "{{ route('submit.ajax.form') }}",
+                        url: "{{ route('submit.offer.form') }}",
                         method: 'post',
                         data: $("form").serialize(),
-                        //dataType: 'json',
+                        dataType: 'json',
                         success: function(response) {
                             window.location.href = "offers";
                         }
@@ -57,18 +55,18 @@
                         $('#results').html('Add with Success!!');
                         console.log('IT WORK BITCH');
                         // Did we get errors or success ?
-                        if (result.errors) {
-                            for (const error of result.errors) {
-                                $('#results').append(error + "<br>");
-                            }
-                        } else if (result.success) {
-                            $('#results').html(result.success);
-                        }
+                        //if (result.errors) {
+                        //for (const error of result.errors) {
+                        //$('#results').append(error + "<br>");
+                        // }
+                        //} else if (result.success) {
+                        //$('#results').html(result.success);
+                        //}
                     })
                     .fail(function(result) {
                         // Fail means : file not found, 500 errors.
                         // Fail doesnt mean : problem with query, syntax error in php
-                        console.log('AJAX FAILED');
+                        console.log('AJAX FAILED', result);
                     })
             });
         });

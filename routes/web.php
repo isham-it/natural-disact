@@ -73,12 +73,12 @@ Route::get('/delete/ask/{id}', [AskController::class, 'destroy'])->middleware(['
 Route::get('/delete/offer/{id}', [OfferController::class, 'destroy'])->middleware(['auth'])->name('delete.offer');
 
 // Show the form to create an offer
-Route::get('/new-offer', [OfferController::class, 'create'])->middleware(['auth'])->name('new.offer');
-Route::post('/new-offer', [OfferController::class, 'store']);
+Route::get('/new-offer', [OfferController::class, 'create'])->name('show.ajax.form');
+Route::post('/new-offer', [OfferController::class, 'store'])->name('submit.offer.form');
 
 // Show the form to create an ask
-Route::get('/new-ask', [AskController::class, 'create'])->middleware(['auth'])->name('new.ask');
-Route::post('/new-ask', [AskController::class, 'store']);
+Route::get('/new-ask', [AskController::class, 'create'])->name('show.ajax.form');
+Route::post('/new-ask', [AskController::class, 'store'])->name('submit.ask.form');
 
 // Show the form to update an ask
 Route::get('/update/ask/{id}', [AskController::class, 'edit'])->middleware(['auth'])->name('update.ask');
@@ -100,7 +100,7 @@ Route::get('/accord/{id}', [AccordController::class, 'show'])->name('details.acc
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function(){
-    return view('dashboard');
+    return view('home');
 })->name('dashboard');
 
 

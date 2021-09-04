@@ -1,8 +1,8 @@
 @extends('layouts.mytemplate')
 
-@section('title', 'Add a new ask')
+@section('title', 'Add an ask')
 @section('css')
-    <link rel="stylesheet" href="/ask.css">
+    <link rel="stylesheet" href="offer.css">
 @endsection
 @section('content')
 
@@ -10,9 +10,8 @@
 
 
 
-
     <div id="results"></div>
-    <form="myForm" action="" method="post">
+    <form id="myForm" action="" method="post">
         <!-- Security token for Laravel : Mandatory in forms -->
         @csrf
 
@@ -29,48 +28,41 @@
 
 
         <input type="submit" value="Publish">
-        </form>
-    @endsection
+    </form>
+@endsection
 
-    @section('scripts')
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+@section('scripts')
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-        <script>
-            /* Wait for the page to be loaded/ready */
-            $(function() {
-                $('#myForm').submit(function(e) {
-                    e.preventDefault();
+    <script>
+        /* Wait for the page to be loaded/ready */
+        $(function() {
+            $('#myForm').submit(function(e) {
+                e.preventDefault();
 
+                // Ajax call
+                $.ajax({
+                        url: "{{ route('submit.ask.form') }}",
+                        method: 'post',
+                        data: $("form").serialize(),
+                        dataType: 'json',
+                        success: function(response) {
+                            window.location.href = "asks";
+                        }
+                    })
+                    .done(function(result) {
+                        $('#results').html('Add with Success!!');
+                        console.log('IT WORK BITCH');
+                        // Did we get errors or success ?
 
-                    // Ajax call
-                    $.ajax({
-                            url: "{{ route('submit.ask.form') }}",
-                            method: 'post',
-                            data: $("form").serialize(),
-                            //dataType: 'json',
-                            success: function(response) {
-                                window.location.href = "asks";
-                            }
-                        })
-                        .done(function(result) {
-                            $('#results').html('Add with Success!!');
-                            console.log('IT WORK BITCH');
-                            // Did we get errors or success ?
-                            if (result.errors) {
-                                for (const error of result.errors) {
-                                    $('#results').append(error + "<br>");
-                                }
-                            } else if (result.success) {
-                                $('#results').html(result.success);
-                            }
-                        })
-                        .fail(function(result) {
-                            // Fail means : file not found, 500 errors.
-                            // Fail doesnt mean : problem with query, syntax error in php
-                            console.log('AJAX FAILED', result);
-                        })
-                });
+                    })
+                    .fail(function(result) {
+                        // Fail means : file not found, 500 errors.
+                        // Fail doesnt mean : problem with query, syntax error in php
+                        console.log('AJAX FAILED', result);
+                    })
             });
-        </script>
-    @endsection
+        });
+    </script>
+@endsection

@@ -1,4 +1,5 @@
 <x-guest-layout>
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -36,7 +37,7 @@
                 autofocus placeholder="Enter your last name" />
         </div>
 
-        Email Address
+        <!-- Email Address -->
         <div class="mt-4">
             <x-label for="email" :value="__('EMAIL')" class="titleForm" />
 
@@ -45,11 +46,28 @@
         </div>
 
         <!-- City -->
+        <!-- <div>
+                    
+                    <x-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required autofocus
+                    placeholder="Enter your city"/>
+                </div> -->
         <div>
-            <x-label for="city" :value="__('CITY')" class="titleForm" />
 
-            <x-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required autofocus
-                placeholder="Enter your city" />
+            <x-label for="city" :value="__('CITY')" class="titleForm" />
+            <select class="cityselect" for="city" :value="__('CITY')" class="titleForm" id="city"
+                class="block mt-1 w-full" type="text" name="city" :value="old('city')" required autofocus>
+                <option selected="selected">Enter your city</option>
+                <?php
+                    $citys = array('Dippach','Garnich','Habscht','Käerjeng','Kehlen','Koerich','Kopstal','Mamer','Steinfort','Bettembourg','Differdange','Dudelange','Esch-sur-Alzette','Frisange','Kayl','Leudelange','Mondercange','Pétange','Reckange-sur-Mess','Roeser','Rumelange','Sanem','Schifflange','Bertrange','Contern','Hesperange','Luxembourg','Niederanven','Sandweiler','Schuttrange','Steinsel','Strassen','Walferdange','Weiler-la-Tour','Colmar-Berg','Bissen','Helperknapp','Fischbach','Heffingen','Larochette','Lintgen','Lorentzweiler','Mersch','Nommern','Clervaux','Wincrange','Parc Hosingen','Troisvierges','Weiswampach','Bettendorf','Bourscheid','Diekirch','Erpeldange-sur-Sûre','Ettelbruck','Feulen','Mertzig','Reisdorf','Schieren','Vallée de l Ernz','Beckerich','Preizerdaul','Ell','Rambrouch','Grosbous','Redange-sur-Attert','Saeul','Useldange','Vichten','Wahl','Boulaide','Esch-sur-Sûre','Goesdorf','Kiischpelt','Lac de la Haute-Sûre','Wiltz','Winseler','Tandel','Putscheid','Vianden','Beaufort','Bech','Berdorf','Consdorf','Echternach','Rosport-Mompach','Waldbillig','Betzdorf','Biwer','Flaxweiler','Grevenmacher','Junglinster','Manternach','Mertert','Wormeldange','Bous','Dalheim','Lenningen','Mondorf-les-Bains','Remich','Schengen','Stadtbredimus','Waldbredimus');
+                    
+                    // Parcourir le tableau des langues
+                    foreach($citys as $value){
+                        ?>
+                <option value="<?php echo strtolower($value); ?>"><?php echo $value; ?></option>
+                <?php
+                        }
+                        ?>
+            </select>
         </div>
 
         <!-- Phone -->
@@ -60,7 +78,7 @@
                 autofocus placeholder="Enter your phone number" />
         </div>
 
-        Password
+        <!-- Password -->
         <div class="mt-4">
             <x-label for="password" :value="__('PASSWORD')" class="titleForm" />
 
@@ -68,7 +86,7 @@
                 placeholder="Enter your password" required autocomplete="new-password" />
         </div>
 
-        Confirm Password
+        <!-- Confirm Password -->
         <div class="mt-4">
             <x-label for="password_confirmation" :value="__('CONFIRM PASSWORD')" class="titleForm" />
 

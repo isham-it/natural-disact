@@ -48,7 +48,6 @@ class AskController extends Controller
         $validations = Validator::make($request->all(), [
 
             'title' => 'required|max:50',
-            //'user_id'=>'required',
             'description' => 'required',
             'city' => 'required',
             'capacity' => 'required',
@@ -63,7 +62,6 @@ class AskController extends Controller
         
         $ask = new Ask;
         $ask->title = $request->title;
-        //$ask->user_id = $request->user_id;
         $ask->description = $request->description;
         $ask->city = $request->city;
         $ask->capacity = $request->capacity;
