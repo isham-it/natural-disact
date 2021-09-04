@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AskController;
 use App\Http\Controllers\OfferController;
+use App\Http\Controllers\WeatherController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
@@ -97,6 +98,9 @@ Route::get('/accords/{offer_id}/{title}', [AccordController::class, 'index'])->n
 // CREATE THE ROUTE TO DISPLAY ONE SPECIFIC accord
 Route::get('/accord/{id}', [AccordController::class, 'show'])->name('details.accord');
 
+
+// CREATE THE ROUTE TO DISPLAY WEATHER
+Route::get('/weather', [WeatherController::class, 'getWeather']);
 
 
 
