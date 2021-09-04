@@ -33,6 +33,10 @@
     background-color: var(--heritage-blue);
 }
 
+#eventBody {
+    background-color: var(--heritage-blue);
+}
+
 
 /*------------------main navbar template--*/
 
@@ -107,10 +111,38 @@
 /*---------------end home card*/
 
 
+/*--------------------event blade*/
+
+#event_img {
+    border-radius: 10%;
+}
+
+#event_div {
+    margin: 20%;
+}
+
+
+/*---------------end event card*/
+
+
 /*--------------------contact blade*/
 
 #contact_card {
     margin: auto;
+    width: 500px !important;
+    height: 200px;
+}
+
+#contact_card h5 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+}
+
+#contact_card p {
+    color: white;
+    text-align: center;
+    font-size: 40px;
 }
 
 
