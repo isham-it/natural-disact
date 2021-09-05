@@ -12,18 +12,52 @@
 @section('content')
 
 
-<div id="event_div">
 
 @foreach ($events as $event)
 
-<p>Date : {{$event->date}}</p>
-<p>Name : {{$event->title}}</p>
-<p>Description :  {{$event->description}}</p>
-<p><img id="event_img" src="{{ $event->poster }}" width="500px"></p>
-<!-- creating link using the name of the route (check web.php file)  -->
+
+
+
+<div class="row text-center">
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <p><img id="event_img" src="{{ $event->poster }}" width="350px"></p>
+            <p><strong>{{$event->title}}</strong></p>
+            <p><strong>{{$event->date}}</strong></p>
+            <p><strong>{{$event->description}}</strong></p>
+
+
+
+            <!-- Used to open the Modal -->
+            <button class="btn" data-toggle="modal" data-target="#myModal">Description</button>
+        </div>
+    </div>
+</div>
 
 @endforeach
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4><span class="glyphicon glyphicon-lock">{{$event->description}}</span></h4>
+            </div>
+            <div class="modal-body">
+            </div>
+
+        </div>
+    </div>
 </div>
+
+
+
+
+
+
 
 
 
