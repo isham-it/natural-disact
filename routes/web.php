@@ -38,7 +38,7 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 
 
@@ -74,12 +74,12 @@ Route::get('/delete/ask-{id}', [AskController::class, 'destroy'])->middleware(['
 Route::get('/delete/offer-{id}', [OfferController::class, 'destroy'])->middleware(['auth'])->name('delete.offer');
 
 // Show the form to create an offer
-Route::get('/new-offer', [OfferController::class, 'create'])->middleware(['auth'])->name('new.offer');
-Route::post('/new-offer', [OfferController::class, 'store']);
+Route::get('/new-offer', [OfferController::class, 'create'])->name('show.ajax.form');
+Route::post('/new-offer', [OfferController::class, 'store'])->name('submit.offer.form');
 
 // Show the form to create an ask
-Route::get('/new-ask', [AskController::class, 'create'])->middleware(['auth'])->name('new.ask');
-Route::post('/new-ask', [AskController::class, 'store']);
+Route::get('/new-ask', [AskController::class, 'create'])->name('show.ajax.form');
+Route::post('/new-ask', [AskController::class, 'store'])->name('submit.ask.form');
 
 // Show the form to update an ask
 Route::get('/update/ask-{id}', [AskController::class, 'edit'])->middleware(['auth'])->name('update.ask');
@@ -109,11 +109,6 @@ Route::get('/accords-{ask_id}-{title}', [AccordAskController::class, 'index'])->
 
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function(){
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-
-
-
-
-
