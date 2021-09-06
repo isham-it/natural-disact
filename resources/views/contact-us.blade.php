@@ -1,6 +1,6 @@
 @extends('layouts.mytemplate')
 
-@section('title', 'Contact')
+@section('title', 'contact-us')
 
 <link rel="stylesheet" href="{{ URL::asset('public/css/nav.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('public/css/main.css') }}">
@@ -34,24 +34,33 @@
       <p>Phone: +352 666 666 666</p>
       <p>Email: disact.project.gmail.com</p>
     </div>
+
+
     <div class="col-md-8">
       <div class="row">
+        <form method="POST" action="{{route ('contact.submit')}}" enctype="multipart/form-data">
+            @csrf
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <input class="form-control"  name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <input class="form-control"  name="email" placeholder="Email" type="email" required>
         </div>
+        <div class="col-sm-6 form-group">
+            <input class="form-control"  name="phone" placeholder="Phone" type="text" required>
+          </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <textarea class="form-control"  name="msg" placeholder="Message" rows="5"></textarea>
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
-          <button class="btn-contact" type="submit">Send</button>
+          <button class="btn btn-primary float-left" type="submit" value="submit">Send</button>
+        </form>
         </div>
-      </div>
     </div>
-  </div>
+
+</div>
+</div>
 
 
 

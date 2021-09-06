@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\AccordController;
 use App\Http\Controllers\AccordAskController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,9 +50,13 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+//route contact-us form
+//Route::get('/contact-us', function () {
+//  return view('contact-us');
+//});
+//Route::get('/contact-us','ContactController@contact');NO WORK with LARAVEL 8
+Route::get('/contact-us', [ContactController::class, 'contact']);
+Route::post('/contact-us', [ContactController::class, 'contactSubmit'])->name('contact.submit');
 
 
 

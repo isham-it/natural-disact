@@ -126,7 +126,7 @@
                                     <li><a href="{{ url('events') }}" class="nav-link">Events</a></li>
                                     <li><a href="{{ url('weather') }}" class="nav-link">Weather</a></li>
                                     <li><a href="{{ url('about') }}" class="nav-link">About</a></li>
-                                    <li><a href="{{ url('contact') }}" class="nav-link">Contact</a></li>
+                                    <li><a href="{{ url('contact-us') }}" class="nav-link">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
