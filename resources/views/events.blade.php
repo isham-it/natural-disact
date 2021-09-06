@@ -12,52 +12,24 @@
 @section('content')
 
 
-
+<h1 class="fw-light text-center text-lg-start mt-4 mb-0">Event announcements </h1>
+<br>
+<div class="container1">
 @foreach ($events as $event)
+<div class="row text-center text-lg-start">
 
-<div class="row text-center">
-    <div class="col-sm-4">
-        <div class="thumbnail">
-            <p><img id="event_img" src="{{ $event->poster}}" width="350px"></p>
-            <p><strong>{{$event->title}}</strong></p>
-            <p><strong>{{$event->date}}</strong></p>
-            <p><strong>{{$event->description}}</strong></p>
-
-
-
-            <!-- Used to open the Modal -->
-            <button class="btn" data-toggle="modal" data-target="#myModal">Description</button>
-        </div>
-    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+    <p><strong>{{$event->date}}</strong></p>
+    <a href="#" class="d-block mb-4 h-100">
+    <img class="img-fluid img-thumbnail" src="{{ $event->poster}}" alt="">
+    <p><strong>{{$event->title}}</strong></p>
+    <p><strong>{{$event->description}}</strong></p>
+    </a>
+  </div>
 </div>
+
+</div>
+
 @endforeach
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4><span class="glyphicon glyphicon-lock">{{$event->description}}</span></h4>
-            </div>
-            <div class="modal-body">
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
 @endsection
-
