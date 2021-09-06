@@ -1,3 +1,16 @@
+@extends('layouts.mytemplate')
+
+@section('title', 'Login page')
+
+
+@section('css')
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+@endsection
+<body id="offerBody">
+@section('content')
+
+
 <x-guest-layout>
 
     <x-slot name="logo">

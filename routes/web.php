@@ -110,5 +110,5 @@ Route::get('/accords-{ask_id}-{title}', [AccordAskController::class, 'index'])->
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('home');
 })->name('dashboard');
