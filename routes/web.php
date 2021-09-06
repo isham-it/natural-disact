@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 use App\Http\Controllers\AccordController;
+use App\Http\Controllers\AccordAskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,10 +56,10 @@ Route::get('/contact', function () {
 
 
 // CREATE THE ROUTE TO DISPLAY ONE SPECIFIC PAGE of HelpOffer
-Route::get('/offer/{id}', [OfferController::class, 'show'])->name('details.offer');
+Route::get('/offer-{id}', [OfferController::class, 'show'])->name('details.offer');
 
 // CREATE THE ROUTE TO DISPLAY ONE SPECIFIC PAGE of HelpRequest
-Route::get('/ask/{id}', [AskController::class, 'show'])->name('details.ask');
+Route::get('/ask-{id}', [AskController::class, 'show'])->name('details.ask');
 
 //List of asks
 Route::get('/asks', [AskController::class, 'index']);
@@ -67,10 +68,10 @@ Route::get('/asks', [AskController::class, 'index']);
 Route::get('/offers', [OfferController::class, 'index']);
 
 //delete ask by id
-Route::get('/delete/ask/{id}', [AskController::class, 'destroy'])->middleware(['auth'])->name('delete.ask');
+Route::get('/delete/ask-{id}', [AskController::class, 'destroy'])->middleware(['auth'])->name('delete.ask');
 
 //delete offer by id
-Route::get('/delete/offer/{id}', [OfferController::class, 'destroy'])->middleware(['auth'])->name('delete.offer');
+Route::get('/delete/offer-{id}', [OfferController::class, 'destroy'])->middleware(['auth'])->name('delete.offer');
 
 // Show the form to create an offer
 Route::get('/new-offer', [OfferController::class, 'create'])->middleware(['auth'])->name('new.offer');
@@ -81,21 +82,30 @@ Route::get('/new-ask', [AskController::class, 'create'])->middleware(['auth'])->
 Route::post('/new-ask', [AskController::class, 'store']);
 
 // Show the form to update an ask
-Route::get('/update/ask/{id}', [AskController::class, 'edit'])->middleware(['auth'])->name('update.ask');
-Route::post('/update/ask/{id}', [AskController::class, 'update']);
+Route::get('/update/ask-{id}', [AskController::class, 'edit'])->middleware(['auth'])->name('update.ask');
+Route::post('/update/ask-{id}', [AskController::class, 'update']);
 
 // Show the form to update a offer
-Route::get('/update/offer/{id}', [OfferController::class, 'edit'])->middleware(['auth'])->name('update.offer');
-Route::post('/update/offer/{id}', [OfferController::class, 'update']);
+Route::get('/update/offer-{id}', [OfferController::class, 'edit'])->middleware(['auth'])->name('update.offer');
+Route::post('/update/offer-{id}', [OfferController::class, 'update']);
 
-// Create an accord
+// Create an accord by offer
 //Route::get('/accords', [AccordController::class, 'create'])->name('accords');
 Route::get('/accords', [AccordController::class, 'show']);
 
-Route::get('/accords/{offer_id}/{title}', [AccordController::class, 'index'])->name('accept.accord');
+Route::get('/accords-{offer_id}-{title}', [AccordController::class, 'index'])->name('accept.accord');
 
 // CREATE THE ROUTE TO DISPLAY ONE SPECIFIC accord
-Route::get('/accord/{id}', [AccordController::class, 'show'])->name('details.accord');
+Route::get('/accord-{id}', [AccordController::class, 'show1'])->name('details.accord');
+
+// Create an accord by ask
+//Route::get('/accords', [AccordController::class, 'create'])->name('accords');
+//Route::get('/accords', [AccordAskController::class, 'show']);
+
+Route::get('/accords-{ask_id}-{title}', [AccordAskController::class, 'index'])->name('accept.accord');
+
+// CREATE THE ROUTE TO DISPLAY ONE SPECIFIC accord
+//Route::get('/accord/{id}', [AccordAskController::class, 'show'])->name('details.accord');
 
 
 

@@ -3,45 +3,45 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-use App\Models\Accord;
+use App\Models\AccordAsk;
 use Illuminate\Support\Facades\Auth;
 
 
-class AccordController extends Controller
+class AccordAskController extends Controller
 {
-    public function index($offer_id, $title)
+    public function index($ask_id, $title)
     {
 
 
-        $accord = Accord::create([
+        $accord = AccordAsk::create([
             'user_id' => Auth::id(),
-            'offer_id' => $offer_id,
+            'offer_id' => $ask_id,
             'title' => $title,
         ]);
 
-        $accords = Accord::all();
+        $accords = AccordAsk::all();
 
 
         return view('accords', ['accords' => $accords]);
     }
 
-    public function show()
-    {
+    //public function show()
+    //{
         //$flowers = DB::select('SELECT * FROM flowers');
-        $accords = Accord::all();
+      //  $accords = AccordAsk::all();
 
         // To display a specific view :
-        return view('accords', ['accords' => $accords]);
-    }
+      //  return view('accords', ['accords' => $accords]);
+    //}
 
 
-    public function show1($id)
+    /*public function show($id)
     {
         // Grab the Ask
-        $accord = Accord ::find($id);
+        $success = Success ::find($id);
         // Show the form
-        return view('details-accord', ['accord' => $accord]);
-    }
+        return view('details-success', ['success' => $success]);
+    }*/
 
        /**
      * Show the form for creating a new resource.
@@ -90,6 +90,7 @@ class AccordController extends Controller
 
 
 }
+
 
 
 
