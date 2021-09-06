@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\event;
+
+use App\Models\Event;
 use Illuminate\Console\Scheduling\Event as SchedulingEvent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Event as FacadesEvent;

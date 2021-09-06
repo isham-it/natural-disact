@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AskController;
 use App\Http\Controllers\OfferController;
+use App\Http\Controllers\WeatherController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -106,6 +107,9 @@ Route::get('/accords-{ask_id}-{title}', [AccordAskController::class, 'index'])->
 
 // CREATE THE ROUTE TO DISPLAY ONE SPECIFIC accord
 //Route::get('/accord/{id}', [AccordAskController::class, 'show'])->name('details.accord');
+
+// CREATE THE ROUTE TO DISPLAY WEATHER
+Route::get('/weather', [WeatherController::class, 'getWeather']);
 
 
 

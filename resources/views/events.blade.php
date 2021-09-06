@@ -1,37 +1,35 @@
-
-
-
 @extends('layouts.mytemplate')
 
 @section('title', 'Event page')
 
 @section('css')
 
-    <link href="{{ URL::asset('public/css/event.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ URL::asset('public/css/main.css') }}">
+
 @endsection
 
+<body id="eventBody">
 @section('content')
 
-@if($message = Session::get('success'))
-<p style="color:green">{{$message}}</p>
-@endif
-==================================
+
+<h1 class="fw-light text-center text-lg-start mt-4 mb-0">Event announcements </h1>
+<br>
+<div class="container1">
 @foreach ($events as $event)
-        <p><strong>Name : </strong> {{$event->title}}</p>
-        <p><strong>Price : </strong> {{$event->description}}</p>
-        <!-- creating link using the name of the route (check web.php file)  -->
+<div class="row text-center text-lg-start">
 
-        <hr>
-    @endforeach
+    <div class="col-lg-3 col-md-4 col-6">
+    <p><strong>{{$event->date}}</strong></p>
+    <a href="#" class="d-block mb-4 h-100">
+    <img class="img-fluid img-thumbnail" src="{{ $event->poster}}" alt="">
+    <p><strong>{{$event->title}}</strong></p>
+    <p><strong>{{$event->description}}</strong></p>
+    </a>
+  </div>
+</div>
 
+</div>
 
-
-
-====================================
-<!--<p><strong>Title : </strong> {{ $event->title }}</p>
-<p><strong>description : </strong> {{ $event->description }}</p>
-<p><strong>poster : </strong> {{ $event->poster }}</p>
-<p><strong>date : </strong> {{ $event->date }}</p>-->
+@endforeach
 
 @endsection
-
