@@ -9,7 +9,7 @@
 @endsection
 <body id="offerBody">
 @section('content')
-
+<!---->
     @if ($message = Session::get('success'))
         <p style="color:green">{{ $message }}</p>
     @endif
