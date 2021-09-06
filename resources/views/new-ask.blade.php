@@ -40,6 +40,7 @@
         $(function() {
             $('#myForm').submit(function(e) {
                 e.preventDefault();
+
                 // Ajax call
                 $.ajax({
                         url: "{{ route('submit.ask.form') }}",
@@ -54,6 +55,7 @@
                         $('#results').html('Add with Success!!');
                         console.log('IT WORK BITCH');
                         // Did we get errors or success ?
+
                     })
                     .fail(function(result) {
                         // Fail means : file not found, 500 errors.
