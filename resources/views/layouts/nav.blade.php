@@ -46,22 +46,22 @@
                 <div class="row align-items-center">
                     <div class="col-6">
                         <div class="d-flex mr-auto">
-                            <a href="#" class="d-flex align-items-center mr-4">
+                            <a href="https://www.google.com/intl/fr/gmail/about/" class="d-flex align-items-center mr-4">
                                 <span class="icon-envelope mr-2"></span>
-                                <span class="d-none d-md-inline-block">info@domain.com</span>
+                                <span class="d-none d-md-inline-block">disact.project@gmail.com</span>
                             </a>
                             <a href="#" class="d-flex align-items-center mr-auto">
                                 <span class="icon-phone mr-2"></span>
-                                <span class="d-none d-md-inline-block">+1 234 4567 8910</span>
+                                <span class="d-none d-md-inline-block">+352 234 456 891</span>
                             </a>
                         </div>
                     </div>
                     <div class="col-6 text-right">
                         <div class="mr-auto">
-                            <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
-                            <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
-                            <a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
-                            <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+                            <a href="https://twitter.com/?lang=fr" class="p-2 pl-0"><span class="icon-twitter"></span></a>
+                            <a href="https://fr-fr.facebook.com/" class="p-2 pl-0"><span class="icon-facebook"></span></a>
+                            <a href="https://www.linkedin.com/home/?originalSubdomain=lu" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
+                            <a href="https://www.instagram.com/" class="p-2 pl-0"><span class="icon-instagram"></span></a>
                         </div>
 
                     </div>

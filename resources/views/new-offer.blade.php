@@ -4,9 +4,13 @@
 @section('css')
     <link rel="stylesheet" href="offer.css">
 @endsection
+
+<body id="new-offerBody">
 @section('content')
 
     <h3>Add a new offer</h3>
+
+
 
 
 
@@ -29,6 +33,9 @@
 
         <input type="submit" value="Publish">
     </form>
+
+
+
 @endsection
 
 @section('scripts')

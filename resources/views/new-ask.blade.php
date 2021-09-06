@@ -4,6 +4,9 @@
 @section('css')
     <link rel="stylesheet" href="offer.css">
 @endsection
+
+
+<body id="new-offerBody">
 @section('content')
 
     <h3>Add a new ask</h3>
