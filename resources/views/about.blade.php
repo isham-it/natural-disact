@@ -16,7 +16,7 @@
     <div class="row text-center">
       <div class="col-sm-4">
         <div class="thumbnail_about">
-          <img src="img/girldisaster.jpg" alt="Paris" width="300px">
+          <img src="img/girldisaster.jpg" alt="Paris" width="100px">
           <p><strong>ALEXANDRE</strong></p>
           <p>Front End/Back End </p>
         </div>

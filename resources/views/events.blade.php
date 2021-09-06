@@ -15,13 +15,10 @@
 
 @foreach ($events as $event)
 
-
-
-
 <div class="row text-center">
     <div class="col-sm-4">
         <div class="thumbnail">
-            <p><img id="event_img" src="{{ $event->poster }}" width="350px"></p>
+            <p><img id="event_img" src="{{ $event->poster}}" width="350px"></p>
             <p><strong>{{$event->title}}</strong></p>
             <p><strong>{{$event->date}}</strong></p>
             <p><strong>{{$event->description}}</strong></p>
@@ -33,7 +30,6 @@
         </div>
     </div>
 </div>
-
 @endforeach
 
 <!-- Modal -->
