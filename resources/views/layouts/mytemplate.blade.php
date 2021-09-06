@@ -23,9 +23,7 @@
 
     @yield('scripts')
 
-    <footer>
-        <p>This is my SPECIAL footer</p>
-    </footer>
+
 </body>
 
 </html>

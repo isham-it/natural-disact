@@ -40,7 +40,6 @@
         $(function() {
             $('#myForm').submit(function(e) {
                 e.preventDefault();
-
                 // Ajax call
                 $.ajax({
                         url: "{{ route('submit.offer.form') }}",
