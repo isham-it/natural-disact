@@ -1,16 +1,41 @@
-<x-guest-layout>
+@extends('layouts.mytemplate')
 
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+@section('title', 'Login page')
 
-    <form class="formulaire" method="POST" action="{{ route('register') }}">
+
+@section('css')
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+@endsection
+
+<body id="homeBody">
+@section('content')
+<div id="register_id">
+<div>
+
+
+
+
+<div class="section_our_solution">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="our_solution_category">
+        <div class="solution_cards_box">
+          <div class="solution_card">
+            <div class="hover_color_bubble"></div>
+
+
+
+            <div class="solu_description">
+
+<div id="register_title">
+            <br><br>
+            <h3 id="register_h3">
+              Register
+</h3>
+            </div>
+
+            <form class="formulaire" method="POST" action="{{ route('register') }}">
         @csrf
 
         <!-- username -->
@@ -96,8 +121,8 @@
                 {{ __('Already registered?') }}
             </a>
 
-            <x-button class="ml-4">
-                {{ __('Register') }}
+            <x-button class="ml-3">
+            <span id="register_button">{{ __('Register') }}</span>
             </x-button>
         </div>
 
@@ -105,4 +130,25 @@
 
 
 
-</x-guest-layout>
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+</div>
+
+
+@endsection
+
