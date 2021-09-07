@@ -52,8 +52,8 @@
                         }
                     })
                     .done(function(result) {
-                        $('#results').html('Add with Success!!');
-                        console.log('IT WORK BITCH');
+                        //$('#results').html('Add with Success!!');
+                        console.log('SUCCESS');
                         // Did we get errors or success ?
 
                     })

@@ -16,10 +16,8 @@ class CreateAskTable extends Migration
         Schema::create('asks', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            //$table->foreign('user_id')->references('id')->on('user')->onUpdate('cascade')->onDelete('cascade');
             $table->string('title');
             $table->string('description');
-           
             $table->string('city');
             $table->string('capacity');
             $table->string('date');
