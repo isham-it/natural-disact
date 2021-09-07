@@ -46,22 +46,22 @@
                 <div class="row align-items-center">
                     <div class="col-6">
                         <div class="d-flex mr-auto">
-                            <a href="#" class="d-flex align-items-center mr-4">
+                            <a href="https://www.google.com/intl/fr/gmail/about/" class="d-flex align-items-center mr-4">
                                 <span class="icon-envelope mr-2"></span>
-                                <span class="d-none d-md-inline-block">info@domain.com</span>
+                                <span class="d-none d-md-inline-block">info@disact.com</span>
                             </a>
                             <a href="#" class="d-flex align-items-center mr-auto">
                                 <span class="icon-phone mr-2"></span>
-                                <span class="d-none d-md-inline-block">+1 234 4567 8910</span>
+                                <span class="d-none d-md-inline-block">+352 691 4567 8910</span>
                             </a>
                         </div>
                     </div>
                     <div class="col-6 text-right">
                         <div class="mr-auto">
-                            <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
-                            <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
-                            <a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
-                            <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+                            <a href="https://twitter.com/" class="p-2 pl-0"><span class="icon-twitter"></span></a>
+                            <a href="https://www.facebook.com/" class="p-2 pl-0"><span class="icon-facebook"></span></a>
+                            <a href="https://www.linkedin.com/" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
+                            <a href="https://www.instagram.com" class="p-2 pl-0"><span class="icon-instagram"></span></a>
                         </div>
 
                     </div>
@@ -76,21 +76,17 @@
 
                         <div id="logo_div">
                             <img id="logo" src="img/logo.png" alt="logo">
-                            <h1 class="my-0 site-logo"><a href="{{ url('home') }}"> <span
-                                        id="logo_span">DIS'ACT</span> </a></h1>
+                            <h1 class="my-0 site-logo"><a href="{{ url('home') }}"> <span id="logo_span">DIS'ACT</span> </a></h1>
                         </div>
 
                     </div>
                     <div class="col-10">
                         <nav class="site-navigation text-right" role="navigation">
                             <div class="container">
-                                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
-                                        class="site-menu-toggle js-menu-toggle text-white"><span
-                                            class="icon-menu h3"></span></a></div>
+                                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
                                 <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-                                    <li class="active"><a href="{{ url('home') }}"
-                                            class="nav-link">Home</a></li>
+                                    <li class="active"><a href="{{ url('home') }}" class="nav-link">Home</a></li>
 
                                     <li class="has-children">
                                         <a href="#" class="nav-link">Services</a>
@@ -126,7 +122,7 @@
                                     <li><a href="{{ url('events') }}" class="nav-link">Events</a></li>
                                     <li><a href="{{ url('weather') }}" class="nav-link">Weather</a></li>
                                     <li><a href="{{ url('about') }}" class="nav-link">About</a></li>
-                                    <li><a href="{{ url('contact') }}" class="nav-link">Contact</a></li>
+                                    <li><a href="{{ url('contact-us') }}" class="nav-link">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>

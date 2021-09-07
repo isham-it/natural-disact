@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
          VerifyEmail::toMailUsing(function ($notifiable, $url) {
         return (new MailMessage)
             ->subject('Natural Dis`Act Verify Email ')
-            ->line('Click the fucking button below to verify your fucking email address bitch!!')
+            ->line('Click the button below to verify your email address.')
             ->action('Verify Email Address', $url);
     });
     }

@@ -3,7 +3,7 @@
 @section('title', 'Accord page')
 
 
-<body id="offerBody">
+<body id="homeBody">
 @section('content')
 
 @if($message = Session::get('success'))

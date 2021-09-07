@@ -8,11 +8,11 @@
 @endsection
 
 
-<body id="offerBody">
+<body id="homeBody">
     @section('content')
 
     @if ($message = Session::get('success'))
-    <p style="color:green">{{ $message }}</p>
+    <p style="color:white">{{ $message }}</p>
     @endif
 
     <div id="offers_div">

@@ -3,7 +3,7 @@
 @section('title', 'Detail page')
 
 
-<body id="offerBody">
+<body id="homeBody">
 @section('content')
 
 
