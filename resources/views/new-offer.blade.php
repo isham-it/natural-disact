@@ -121,16 +121,8 @@
                         }
                     })
                     .done(function(result) {
-                        $('#results').html('Add with Success!!');
-                        console.log('IT WORKS BITCH');
-                        // Did we get errors or success ?
-                        //if (result.errors) {
-                        //for (const error of result.errors) {
-                        //$('#results').append(error + "<br>");
-                        // }
-                        //} else if (result.success) {
-                        //$('#results').html(result.success);
-                        //}
+                        console.log('SUCCESS');
+
                     })
                     .fail(function(result) {
                         // Fail means : file not found, 500 errors.

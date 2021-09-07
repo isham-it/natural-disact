@@ -569,7 +569,7 @@ transform: translate(-50%, 50%);
     color: var(--sterling);
 }
 
- :root {
+:root {
     --storm: #7a8189;
     --weathered-grey: #505149;
     --sterling: #d5d7d2;
