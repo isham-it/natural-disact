@@ -30,6 +30,13 @@
 }
 
 
+
+
+#weatherBody {
+    background-color: var(--heritage-blue);
+}
+
+
 /*------------------main navbar template--*/
 
 #logo_span {
@@ -374,6 +381,7 @@
 
 
 /*-----------------end event blade*/
+
 
 
 .disact {
@@ -743,6 +751,57 @@ h2 {
 
 
 /*--------------------end contact blade*/
+/*--------------------Weather blade start */
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+html,
+body {
+    height: 100%
+}
+
+* {
+    padding: 0px;
+    margin: 0px
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 50px !important;
+    color: #6f707d;
+    font-family: 'Marcellus', serif
+}
+
+#heading {
+    font-size: 55px;
+    color: #2b304d
+}
+
+.temp {
+    place-items: center
+}
+
+.temp-details>p>span,
+.grey {
+    color: #a3acc1;
+    font-size: 12px
+}
+
+.fa {
+    color: #a5a5b1
+}
+
+*:focus {
+    outline: none
+}
+
+#weatherdiv {
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+
+/*-----------------Weather blade end*/
 
 .disact {
     font-size: 30px;
