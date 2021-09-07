@@ -12,23 +12,53 @@
 @section('content')
 
 
-<h1 class="fw-light text-center text-lg-start mt-4 mb-0">Event announcements </h1>
-<br>
+<h1 id="event_h1" class="fw-light text-center text-lg-start mt-4 mb-0">Event announcements </h1>
+<br><br>
 <div class="container1">
 @foreach ($events as $event)
-<div class="row text-center text-lg-start">
+<div id="event_id">
+        <div>
 
-    <div class="col-lg-3 col-md-4 col-6">
-    <p><strong>{{$event->date}}</strong></p>
-    <a href="#" class="d-block mb-4 h-100">
-    <img class="img-fluid img-thumbnail" src="{{ $event->poster}}" alt="">
-    <p><strong>{{$event->title}}</strong></p>
-    <p><strong>{{$event->description}}</strong></p>
-    </a>
+<div class="section_our_solution">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="our_solution_category">
+        <div class="solution_cards_box">
+          <div class="solution_card">
+            <div class="hover_color_bubble"></div>
+
+
+
+
+
+
+            <div class="solu_title">
+                <div class="solu_description">
+                <h3><p>{{$event->title}}</p></h3>
+                <p><strong>{{$event->date}}</strong></p>
+                <p id="event_description">
+                    {{$event->description}} It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+                </p>
+            </div>
+
+
+            </div>
+            <div>
+            <img src="https://blobsvc.wort.lu/picture/e72082da461f01d19357a42174c89216/653/391/wortv3/b32554dd09502dfb9db7d0ccac26160c1dab8d53" width="500px" height="500px" alt="">
+</div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+        </div></div>
 
-</div>
 
 @endforeach
 

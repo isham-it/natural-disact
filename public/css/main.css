@@ -300,6 +300,82 @@
 
 /*----------------end offers blade*/
 
+
+/*-----------------login*/
+#login_id .solution_cards_box .solution_card{
+    display: flex;
+    justify-content: center;
+    overflow: visible !important;
+    min-height: 500 !important;
+}
+
+#login_title {
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+
+}
+#login_h3 {
+    color: #42c3ca !important;
+}
+#login_button :hover {
+    color: blue !important;
+}
+
+
+
+/*-----------------end login*/
+/*-----------------register*/
+#register_id .solution_cards_box .solution_card{
+    display: flex;
+    justify-content: center;
+    overflow: visible !important;
+    min-height: 1100 !important;
+}
+#register_title {
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+
+}
+#register_h3 {
+    color: #42c3ca !important;
+}
+#register_button :hover {
+    color: blue !important;
+}
+/*-----------------end register*/
+/*-----------------new offer blade*/
+#new_offer_id .solution_cards_box .solution_card{
+    display: flex;
+    justify-content: center;
+    overflow: visible !important;
+    min-height: 700 !important;
+}
+#new_offer_title {
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+}
+#new_offer_h3 {
+    color: #42c3ca !important;
+}
+/*-----------------end new offer blade*/
+/*----------------- event blade*/
+#event_h1 {
+    color: #42c3ca !important;
+}
+#event_id .solution_cards_box .solution_card{
+    display: flex;
+    justify-content: center;
+    overflow: hidden !important;
+    min-height: 520 !important;
+}
+
+
+/*-----------------end event blade*/
+
+
 .disact {
     font-size: 30px;
     font-weight: bold;
@@ -473,7 +549,7 @@ transform: translate(-50%, 50%);
         #phone,
         #password,
         #password_confirmation {
-            text-align: center;
+            /* text-align: center; */
             background-color: white;
             font-family: inherit;
             font-family: "Kaisei Decol", serif;
@@ -845,10 +921,10 @@ footer a {
     #phone,
     #password,
     #password_confirmation {
-        text-align: center;
+        /* text-align: center; */
         background-color: white;
         font-family: inherit;
-        font-family: 'Kaisei Decol', serif;
+        /* font-family: 'Kaisei Decol', serif; */
     }
 }
 
