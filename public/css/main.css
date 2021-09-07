@@ -365,6 +365,13 @@
 #event_h1 {
     color: #42c3ca !important;
 }
+#event_id .solution_cards_box .solution_card{
+    display: flex;
+    justify-content: center;
+    overflow: hidden !important;
+    min-height: 520 !important;
+}
+
 
 /*-----------------end event blade*/
 
