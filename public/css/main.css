@@ -29,6 +29,10 @@
     background-color: var(--heritage-blue);
 }
 
+#weatherBody {
+    background-color: var(--heritage-blue);
+}
+
 
 /*------------------main navbar template--*/
 
@@ -302,7 +306,8 @@
 
 
 /*-----------------login*/
-#login_id .solution_cards_box .solution_card{
+
+#login_id .solution_cards_box .solution_card {
     display: flex;
     justify-content: center;
     overflow: visible !important;
@@ -313,59 +318,77 @@
     display: flex;
     justify-content: center !important;
     text-align: center !important;
-
 }
+
 #login_h3 {
     color: #42c3ca !important;
 }
+
 #login_button :hover {
     color: blue !important;
 }
 
 
-
 /*-----------------end login*/
+
+
 /*-----------------register*/
-#register_id .solution_cards_box .solution_card{
+
+#register_id .solution_cards_box .solution_card {
     display: flex;
     justify-content: center;
     overflow: visible !important;
     min-height: 1100 !important;
 }
+
 #register_title {
     display: flex;
     justify-content: center !important;
     text-align: center !important;
-
 }
+
 #register_h3 {
     color: #42c3ca !important;
 }
+
 #register_button :hover {
     color: blue !important;
 }
+
+
 /*-----------------end register*/
+
+
 /*-----------------new offer blade*/
-#new_offer_id .solution_cards_box .solution_card{
+
+#new_offer_id .solution_cards_box .solution_card {
     display: flex;
     justify-content: center;
     overflow: visible !important;
     min-height: 700 !important;
 }
+
 #new_offer_title {
     display: flex;
     justify-content: center !important;
     text-align: center !important;
 }
+
 #new_offer_h3 {
     color: #42c3ca !important;
 }
+
+
 /*-----------------end new offer blade*/
+
+
 /*----------------- event blade*/
+
 #event_h1 {
     color: #42c3ca !important;
 }
-#event_id .solution_cards_box .solution_card{
+
+#event_id .solution_cards_box .solution_card {
     display: flex;
     justify-content: center;
     overflow: hidden !important;
@@ -374,7 +397,6 @@
 
 
 /*-----------------end event blade*/
-
 
 .disact {
     font-size: 30px;
@@ -683,6 +705,59 @@ transform: translate(-50%, 50%);
 
 
 /*---------------end home card*/
+
+
+/*--------------------Weather blade start */
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+html,
+body {
+    height: 100%
+}
+
+* {
+    padding: 0px;
+    margin: 0px
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 50px !important;
+    color: #6f707d;
+    font-family: 'Marcellus', serif
+}
+
+#heading {
+    font-size: 55px;
+    color: #2b304d
+}
+
+.temp {
+    place-items: center
+}
+
+.temp-details>p>span,
+.grey {
+    color: #a3acc1;
+    font-size: 12px
+}
+
+.fa {
+    color: #a5a5b1
+}
+
+*:focus {
+    outline: none
+}
+
+#weatherdiv {
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+
+/*-----------------Weather blade  end*/
 
 
 /*--------------------event blade*/
