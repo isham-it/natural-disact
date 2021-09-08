@@ -33,7 +33,7 @@
                 </div>
                 <div class="d-flex">
                     <div class="temp-details flex-grow-1">
-                        <p class="my-1"> <img src="img/B9kqOzp.png" height="17px"> <span>{{$weatherArray['wind']['speed']}} Km/H</span> </p>
+                        <p class="my-1"> <img src="https://i.imgur.com/B9kqOzp.png" height="17px"> <span>{{$weatherArray['wind']['speed']}} Km/H</span> </p>
                         <p class="my-1"> <i class="fa fa-tint mr-2" aria-hidden="true"></i> <span>{{$weatherArray['main']['humidity']}}%</span> </p>
                         <p class="my-1"> <img src="{{URL::asset('img/pressure.png')}}" height="17px"> <span> {{$weatherArray['main']['pressure']}} </span> </p>
                     </div>

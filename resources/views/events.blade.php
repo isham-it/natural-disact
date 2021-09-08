@@ -34,6 +34,10 @@
 
             <div class="solu_title">
                 <div class="solu_description">
+                    <div>
+
+                        <p><img src= " {{ $event->poster }} " width=600px" height="250px" alt=""></p>
+                    </div>
                 <h3><p>{{$event->title}}</p></h3>
                 <p><strong>{{$event->date}}</strong></p>
                 <p id="event_description">
@@ -43,15 +47,12 @@
 
 
             </div>
-            <div>
-            <img src="img/event.jpg" width="500px" height="500px" alt="">
-</div>
+           
 
 
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -63,3 +64,6 @@
 @endforeach
 
 @endsection
+
+
+

@@ -36,7 +36,7 @@
         <img src="img/Floods-in-Echternach.jpg" alt="Echternach" width="1200" height="700">
         <div class="carousel-caption">
             <h2>LUXEMBOURG 2021</h2>
-        <p>Thank you, A night we won't forget.</p>
+        <p>A night we won't forget.</p>
     </div>
     </div>
 </div>

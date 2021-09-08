@@ -22,7 +22,7 @@ class ContactController extends Controller
 
         ],function($mail) use($request){
             $mail->from(env('MAIL_FROM_ADDRESS'),$request->name);
-            $mail->to("aitisham@outlook.fr")->subject('Contact US Message');
+            $mail->to("natural.disact@outlook.fr")->subject('Contact US Message');
         });
         //return  "Message has been send successfully";
         return redirect('/contact-us')->with('success', $request->name . ' your message has been send successfully!!!!!!');
