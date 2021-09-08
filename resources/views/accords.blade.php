@@ -10,6 +10,12 @@
 <p style="color:green">{{$message}}</p>
 @endif
 
+<div id="offers_div">
+        <div>
+        <div class="d-flex justify-content-center">
+    <a href="{{ url('new-offer') }}"><button id="add_button" type="button" class="read_more_btn">OUR SUCCESSES</button></a>
+</div>
+    <br>
 
 @foreach ($accords as $accord)
 

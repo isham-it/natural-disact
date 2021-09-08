@@ -44,7 +44,7 @@
 
             </div>
             <div>
-            <img src="https://blobsvc.wort.lu/picture/e72082da461f01d19357a42174c89216/653/391/wortv3/b32554dd09502dfb9db7d0ccac26160c1dab8d53" width="500px" height="500px" alt="">
+            <img src="img/event.jpg" width="500px" height="500px" alt="">
 </div>
 
 
