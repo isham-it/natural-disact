@@ -46,7 +46,7 @@
                 <div class="row align-items-center">
                     <div class="col-6">
                         <div class="d-flex mr-auto">
-                            <a href="#" class="d-flex align-items-center mr-4">
+                            <a href="https://www.google.com/intl/fr/gmail/about/" class="d-flex align-items-center mr-4">
                                 <span class="icon-envelope mr-2"></span>
                                 <span class="d-none d-md-inline-block">info@disact.com</span>
                             </a>
@@ -122,7 +122,7 @@
                                     <li><a href="{{ url('events') }}" class="nav-link">Events</a></li>
                                     <li><a href="{{ url('weather') }}" class="nav-link">Weather</a></li>
                                     <li><a href="{{ url('about') }}" class="nav-link">About</a></li>
-                                    <li><a href="{{ url('contact') }}" class="nav-link">Contact</a></li>
+                                    <li><a href="{{ url('contact-us') }}" class="nav-link">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>

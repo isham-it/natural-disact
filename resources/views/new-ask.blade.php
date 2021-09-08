@@ -8,7 +8,7 @@
 <body id="homeBody">
     @section('content')
 
-    
+
 
     <div id="new_offer_id">
         <div>
@@ -125,8 +125,8 @@
                         }
                     })
                     .done(function(result) {
-                        $('#results').html('Add with Success!!');
-                        console.log('IT WORK BITCH');
+                        //$('#results').html('Add with Success!!');
+                        console.log('SUCCESS');
                         // Did we get errors or success ?
 
                     })
