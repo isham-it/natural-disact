@@ -8,6 +8,25 @@
 <body id="homeBody">
     @section('content')
 
+
+    <div>
+        @if (session('success'))
+        <style type="text/css">
+            .alert-success {
+                width: 30%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                border-radius: 10px;
+            }
+        </style>
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+        </div>
+
+
         <nav>
 
             <ul>

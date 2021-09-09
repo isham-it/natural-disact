@@ -1,5 +1,12 @@
+@extends('layouts.mytemplate')
+
+@section('title', 'Verifycation Page')
+
+
+<body id="verifyBody">
+
 <x-guest-layout>
-   
+
         <x-slot name="logo">
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -27,7 +34,7 @@
                 </div>
             </form>
 
-            <form method="POST" action="{{ route('logout') }}">
+            <form method="GET" action="{{ route('home') }}">
                 @csrf
 
                 <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
@@ -35,5 +42,5 @@
                 </button>
             </form>
         </div>
-   
+
 </x-guest-layout>
