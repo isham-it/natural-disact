@@ -19,7 +19,7 @@ class CreateAskTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('city');
-            $table->string('capacity');
+            $table->integer('capacity');
             $table->string('date');
 
 
